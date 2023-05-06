@@ -1,5 +1,5 @@
 import { createSlice, isAnyOf } from "@reduxjs/toolkit";
-import { fetchContacts, addContact, deleteContact } from "redux/operations";
+import { fetchContacts, addContact, deleteContact } from "redux/contactsSlice/operations";
 
 
 const extraOperations = [fetchContacts, addContact, deleteContact];

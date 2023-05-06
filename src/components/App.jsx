@@ -6,7 +6,7 @@ import PhoneBackground from "./PhoneBackground/PhoneBackground";
 import { useDispatch, useSelector } from "react-redux";
 import { selectContacts, selectError, selectIsLoading } from "redux/selectors";
 import { useEffect } from "react";
-import { fetchContacts } from "redux/operations";
+import { fetchContacts } from "redux/contactsSlice/operations";
 import PhonebookTitle from "./PhonebookTitle/PhonebookTitle";
 
 

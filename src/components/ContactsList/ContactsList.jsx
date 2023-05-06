@@ -2,7 +2,7 @@ import React from "react";
 import { ContactsBox } from "./ContactsList.styled";
 import { useDispatch, useSelector} from "react-redux";
 import { selectFilteredContacts } from "../../redux/selectors";
-import { deleteContact } from "redux/operations";
+import { deleteContact } from "redux/contactsSlice/operations";
 import ContactItem from "components/ContactItem/ContactItem";
 
 

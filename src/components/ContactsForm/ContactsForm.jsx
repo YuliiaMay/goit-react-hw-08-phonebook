@@ -3,7 +3,7 @@ import { Form, CteateFormBtn, FormTitle, ContactFormLabel, ContactInput, AddCont
 import { useDispatch, useSelector } from "react-redux";
 import { selectContacts } from "redux/selectors";
 import { useState } from "react";
-import { addContact } from "redux/operations";
+import { addContact } from "redux/contactsSlice/operations";
 import { useToggle } from "hooks/useToggle";
 
 const ContactsForm = () => {
