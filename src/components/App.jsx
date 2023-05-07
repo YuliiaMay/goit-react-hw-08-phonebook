@@ -1,41 +1,39 @@
-import Section from "./Section/Section";
-import ContactsForm from "./ContactsForm/ContactsForm";
-import ContactsFilter from "./ContactsList/Filter";
-import ContactsList from "./ContactsList/ContactsList";
-import PhoneBackground from "./PhoneBackground/PhoneBackground";
-import { useDispatch, useSelector } from "react-redux";
-import { selectContacts, selectError, selectIsLoading } from "redux/selectors";
-import { useEffect } from "react";
-import { fetchContacts } from "redux/contactsSlice/operations";
-import PhonebookTitle from "./PhonebookTitle/PhonebookTitle";
+import HomePage from "pages/HomePage/HomePage";
+import LoginPage from "pages/LoginPage/LoginPage";
+import NotFound from "pages/NotFound/NotFound";
+import PhonebookPage from "pages/PhonebookPage/PhonebookPage";
+import RegisterPage from "pages/RegisterPage/RegisterPage";
+import { useDispatch } from "react-redux";
+import { Link, Route, Routes } from "react-router-dom";
+import Layout from "./Layout/Layout";
 
 
 export default function App() {
-  const contacts = useSelector(selectContacts);
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
   const dispatch = useDispatch();
-
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
+  console.log(dispatch);
 
 
 
   return (
-    <main>
-      <PhoneBackground />
-      <Section>
-        <PhonebookTitle/>
-        <ContactsForm />
-        <ContactsFilter />
+    <div>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/phonebook"></Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" index element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Route>
         
-        {isLoading && <p>Loading tasks...</p>}
-        {error && <p>{error}</p>}
-        {contacts.length > 0 && <ContactsList />}
-          
-      </Section>        
-    </main>
+
+
+        <Route path="/phonebook" element={<PhonebookPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+        
+    </div>
     );
 };
