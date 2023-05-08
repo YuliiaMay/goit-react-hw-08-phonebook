@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectContacts, selectError, selectIsLoading } from "redux/selectors";
 import { fetchContacts } from "redux/contactsSlice/operations";
 import { useEffect } from "react";
+import ContactsList from "components/ContactsList/ContactsList";
 
 const PhonebookApp = () => {
     const contacts = useSelector(selectContacts);
