@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom";
 
+import Navigation from "./Navigation/Navigation";
+import AuthNav from "./AuthNav/AuthNav";
+import { Header } from "./AppBar.styled";
 
 const AppBar = () => {
     return (
-        <header>
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/phonebook">Phonebook</Link>
-            </nav>
+        <Header>
+                {/* <Link to="/">Home</Link>
+                <Link to="/phonebook">Phonebook</Link> */}
+            <Navigation />
+            <AuthNav />
             
-        </header>
+        </Header>
     )
 };
 

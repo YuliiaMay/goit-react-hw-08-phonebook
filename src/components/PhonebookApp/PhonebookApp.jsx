@@ -6,8 +6,12 @@ import ContactsFilter from "components/ContactsList/Filter";
 import { useDispatch, useSelector } from "react-redux";
 import { selectContacts, selectError, selectIsLoading } from "redux/selectors";
 import { fetchContacts } from "redux/contactsSlice/operations";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import ContactsList from "components/ContactsList/ContactsList";
+import AppBar from "components/AppBar/AppBar";
+import HomePage from "pages/HomePage/HomePage";
+import { Outlet } from "react-router-dom";
+
 
 const PhonebookApp = () => {
     const contacts = useSelector(selectContacts);
@@ -21,15 +25,22 @@ const PhonebookApp = () => {
         <main>
             <PhoneBackground />
             <Section>
-                <PhonebookTitle/>
+                <AppBar />
+                {/* <HomePage /> */}
+                <Outlet />
+
+                {/* <PhonebookTitle/>
                 <ContactsForm />
                 <ContactsFilter />
                 
                 {isLoading && <p>Loading tasks...</p>}
                 {error && <p>{error}</p>}
-                {contacts.length > 0 && <ContactsList />}
+                {contacts.length > 0 && <ContactsList />} */}
                 
             </Section>
+            {/* <Suspense>
+                <Outlet />
+            </Suspense> */}
         </main>
     )
 };

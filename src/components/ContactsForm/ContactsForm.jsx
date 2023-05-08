@@ -1,5 +1,5 @@
 import { nanoid } from "@reduxjs/toolkit";
-import { Form, CteateFormBtn, FormTitle, ContactFormLabel, ContactInput, AddContactBtn, Wrapper, BtnBox, CancelFormBtn } from "./ContactsForm.styled";
+import { Form, CteateFormLink, FormTitle, ContactFormLabel, ContactInput, AddContactBtn, Wrapper, BtnBox, CancelFormBtn } from "./ContactsForm.styled";
 import { useDispatch, useSelector } from "react-redux";
 import { selectContacts } from "redux/selectors";
 import { useState } from "react";
@@ -54,7 +54,7 @@ const ContactsForm = () => {
         <Wrapper>
             
             {
-                !isOpen && <CteateFormBtn type="button" onClick={open}>New Contact</CteateFormBtn>
+                !isOpen && <CteateFormLink to="create-contact" onClick={open}>New Contact</CteateFormLink>
             }
             
             {

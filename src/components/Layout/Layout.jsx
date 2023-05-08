@@ -15,9 +15,7 @@ const Layout = () => {
                 </div>
             </div>
             {/* <AppBar /> */}
-            <Suspense>
-                <Outlet />
-            </Suspense>
+
         </>
     )
 };

@@ -22,19 +22,15 @@ const PhonebookPage = () => {
     }, [dispatch]);
 
     return (
-        <main>
-            <PhoneBackground />
-            <Section>
-                <PhonebookTitle/>
-                <ContactsForm />
-                <ContactsFilter />
-                
-                {isLoading && <p>Loading tasks...</p>}
-                {error && <p>{error}</p>}
-                {contacts.length > 0 && <ContactsList />}
-                
-            </Section>
-        </main>
+        <div>
+            <PhonebookTitle/>
+            <ContactsForm />
+            <ContactsFilter />
+            
+            {isLoading && <p>Loading tasks...</p>}
+            {error && <p>{error}</p>}
+            {contacts.length > 0 && <ContactsList />}
+        </div>
     )
 
 };

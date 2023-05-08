@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
     margin-bottom: 30px;
 `;
 
-export const CteateFormBtn = styled.button`
+export const CteateFormLink = styled(Link)`
     background-color: transparent;
     border-radius: 8px;
     border: 1px solid #0070A0;

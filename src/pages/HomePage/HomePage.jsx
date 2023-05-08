@@ -1,10 +1,14 @@
 
 
 const HomePage = () => {
-    <>
+    return (
+        <>
         {/* <PhonebookApp /> */}
-        <button>Phonebook</button>
-    </>
+            <p>12:00</p>
+            <p>12 March 2018</p>
+        </>
+    )
+
 };
 
 export default HomePage;
