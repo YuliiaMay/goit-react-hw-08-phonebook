@@ -1,21 +1,26 @@
+import { RegisterForm, RegisterFormInput, RegisterFormLabel,RegisterFormBtn } from "./RegisterPage.styled";
+
 const RegisterPage = () => {
     return (
         <>
             <h1>Register</h1>
-            <form action="">
-                <label>
+            <RegisterForm>
+                <RegisterFormLabel>
                     User Name
-                    <input type="text" />
-                </label>
-                <label>
+                    <RegisterFormInput type="text" />
+                </RegisterFormLabel>
+                <RegisterFormLabel>
                     Email
-                    <input type="email" />
-                </label>   
-                <label>
+                    <RegisterFormInput type="email" />
+                </RegisterFormLabel>   
+                <RegisterFormLabel>
                     Password
-                    <input type="password" />
-                </label>   
-            </form>
+                    <RegisterFormInput type="password" />
+                </RegisterFormLabel> 
+                
+            </RegisterForm>
+            <RegisterFormBtn>OK</RegisterFormBtn>
+            
         </>
     )
 };
