@@ -26,21 +26,11 @@ const PhonebookApp = () => {
             <PhoneBackground />
             <Section>
                 <AppBar />
-                {/* <HomePage /> */}
-                <Outlet />
 
-                {/* <PhonebookTitle/>
-                <ContactsForm />
-                <ContactsFilter />
-                
-                {isLoading && <p>Loading tasks...</p>}
-                {error && <p>{error}</p>}
-                {contacts.length > 0 && <ContactsList />} */}
-                
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Outlet />
+                </Suspense>
             </Section>
-            {/* <Suspense>
-                <Outlet />
-            </Suspense> */}
         </main>
     )
 };

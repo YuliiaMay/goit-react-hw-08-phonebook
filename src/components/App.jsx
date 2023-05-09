@@ -1,16 +1,26 @@
-import HomePage from "pages/HomePage/HomePage";
-import LoginPage from "pages/LoginPage/LoginPage";
-import NotFound from "pages/NotFound/NotFound";
-import PhonebookPage from "pages/PhonebookPage/PhonebookPage";
-import RegisterPage from "pages/RegisterPage/RegisterPage";
+// import HomePage from "pages/HomePage/HomePage";
+// import LoginPage from "pages/LoginPage/LoginPage";
+// import NotFound from "pages/NotFound/NotFound";
+// import PhonebookPage from "pages/PhonebookPage/PhonebookPage";
+// import RegisterPage from "pages/RegisterPage/RegisterPage";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout/Layout";
-import ContactsForm from "./ContactsForm/ContactsForm";
-import ContactDetails from "pages/ContactDetails/ContactDetails";
+// import ContactsForm from "./ContactsForm/ContactsForm";
+// import ContactDetails from "pages/ContactDetails/ContactDetails";
 import { useDispatch } from "react-redux";
 import { useAuth } from "hooks/useAuth";
-import { useEffect } from "react";
+import { lazy, useEffect } from "react";
 import { refreshUser } from "redux/authSlice/operations";
+
+
+
+const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
+const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
+const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
+const PhonebookPage = lazy(() => import('../pages/PhonebookPage/PhonebookPage'));
+const ContactsForm = lazy(() => import('../components/ContactsForm/ContactsForm'));
+const ContactDetails = lazy(() => import('pages/ContactDetails/ContactDetails'));
+const NotFound = lazy(() => import('pages/NotFound/NotFound'))
 
 
 export default function App() {
@@ -30,8 +40,8 @@ export default function App() {
               <Route path="/phonebook" element={<PhonebookPage />}>
                 <Route path="create-contact" element={<ContactsForm />} />
               </Route>
-              {/* <Route path="/phonebook" element={<PhonebookPage />} /> */}
-              {/* <Route path="/phonebook/:contact" element={<ContactDetails />} /> */}
+
+              <Route path="/phonebook/:contact" element={<ContactDetails />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="*" element={<NotFound />} />

@@ -15,7 +15,6 @@ const PhonebookPage = () => {
     const error = useSelector(selectError);
     const isLoading = useSelector(selectIsLoading);
     const dispatch = useDispatch();
-
     
     useEffect(() => {
         dispatch(fetchContacts());
@@ -27,9 +26,9 @@ const PhonebookPage = () => {
             <ContactsForm />
             <ContactsFilter />
             
-            {/* {isLoading && <p>Loading tasks...</p>}
+            {isLoading && <p>Loading tasks...</p>}
             {error && <p>{error}</p>}
-            {contacts.length > 0 && <ContactsList />} */}
+            {contacts.length > 0 && <ContactsList />}
         </div>
     )
 

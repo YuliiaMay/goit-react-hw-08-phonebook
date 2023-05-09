@@ -8,10 +8,13 @@ const LoginPage = () => {
         e.preventDefault();
 
         const form = e.currentTarget;
+        console.log(form.elements.email.value);
+        console.log(form.elements.password.value);
+
         dispatch(
             logIn({
-                email: form.elements.name.email,
-                password: form.elements.name.password
+                email: form.elements.email.value,
+                password: form.elements.password.value
             })
         );
 
@@ -21,16 +24,16 @@ const LoginPage = () => {
     return (
         <>
             <h1>Log In</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>
                     Email
-                    <input type="email" />
+                    <input type="email" name="email"/>
                 </label>   
                 <label>
                     Password
-                    <input type="password" />
+                    <input type="password" name="password"/>
                 </label>   
-                <button>Log In</button>
+                <button type="submit">Log In</button>
             </form>
         </>
     )
