@@ -27,9 +27,9 @@ const PhonebookPage = () => {
             <ContactsForm />
             <ContactsFilter />
             
-            {isLoading && <p>Loading tasks...</p>}
+            {/* {isLoading && <p>Loading tasks...</p>}
             {error && <p>{error}</p>}
-            {contacts.length > 0 && <ContactsList />}
+            {contacts.length > 0 && <ContactsList />} */}
         </div>
     )
 

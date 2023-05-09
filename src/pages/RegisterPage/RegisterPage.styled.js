@@ -5,7 +5,7 @@ export const RegisterForm = styled.form`
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    margin-bottom: 50px;
+    
 `;
 
 
@@ -25,5 +25,5 @@ export const RegisterFormInput = styled.input`
 export const RegisterFormBtn = styled.button`
     width: 100px;
     height: 30px;
-    margin: 0 auto;
+    margin-top: 50px;
 `;

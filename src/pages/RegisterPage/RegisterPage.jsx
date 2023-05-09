@@ -4,7 +4,7 @@ import { register } from "redux/authSlice/operations";
 
 const RegisterPage = () => {
     const dispatch = useDispatch();
-    console.log(111);
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -13,10 +13,11 @@ const RegisterPage = () => {
         dispatch(
             register({
                 name: form.elements.name.value,
-                email: form.elements.value,
+                email: form.elements.email.value,
                 password: form.elements.password.value
             })
-        )
+        );
+        
         form.reset();
     };
 
@@ -26,19 +27,20 @@ const RegisterPage = () => {
             <RegisterForm onSubmit={handleSubmit}>
                 <RegisterFormLabel>
                     User Name
-                    <RegisterFormInput type="text" />
+                    <RegisterFormInput type="text" name="name" />
                 </RegisterFormLabel>
                 <RegisterFormLabel>
                     Email
-                    <RegisterFormInput type="email" />
+                    <RegisterFormInput type="email" name="email" />
                 </RegisterFormLabel>   
                 <RegisterFormLabel>
                     Password
-                    <RegisterFormInput type="password" />
+                    <RegisterFormInput type="password" name="password" />
                 </RegisterFormLabel> 
-                
+
+                <RegisterFormBtn type="submit">Register</RegisterFormBtn>    
             </RegisterForm>
-            <RegisterFormBtn type="submit">Register</RegisterFormBtn>
+            
             
         </>
     )

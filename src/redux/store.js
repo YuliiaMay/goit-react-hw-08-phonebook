@@ -24,7 +24,6 @@ const middleware = [
     })
 ];
 
-// const middleware = (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
 
 const authPersistConfig = {
     key: 'auth',
@@ -39,14 +38,9 @@ export const store = configureStore({
         filter: filterReducer
     },
     middleware,
-    // middleware: getDefaultMiddleware =>
-    //     getDefaultMiddleware({
-    //         serializableCheck: {
-    //             ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-    //         },
-    //     }),
     devTools: process.env.NODE_ENV === 'development',
 });
+
 
 export const persistor = persistStore(store);
 
