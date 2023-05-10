@@ -1,17 +1,9 @@
-// import HomePage from "pages/HomePage/HomePage";
-// import LoginPage from "pages/LoginPage/LoginPage";
-// import NotFound from "pages/NotFound/NotFound";
-// import PhonebookPage from "pages/PhonebookPage/PhonebookPage";
-// import RegisterPage from "pages/RegisterPage/RegisterPage";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout/Layout";
-// import ContactsForm from "./ContactsForm/ContactsForm";
-// import ContactDetails from "pages/ContactDetails/ContactDetails";
 import { useDispatch } from "react-redux";
 import { useAuth } from "hooks/useAuth";
 import { lazy, useEffect } from "react";
 import { refreshUser } from "redux/authSlice/operations";
-
 
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
