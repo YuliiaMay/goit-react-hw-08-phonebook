@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
+
 import { FcHome } from "react-icons/fc";
 import { BiPhoneCall } from "react-icons/bi";
+import { HomeLink, PhonebookLink } from "./Navigation.styled";
 
 const Navigation = () => {
     return (
         <div>
-            <Link to="/"><FcHome size="24"/></Link>
-            <Link to="/phonebook"><BiPhoneCall size="24"/></Link>
+            <HomeLink to="/"><FcHome size="24"/></HomeLink>
+            <PhonebookLink to="/phonebook"><BiPhoneCall size="24" /></PhonebookLink>
         </div>
 
     )
