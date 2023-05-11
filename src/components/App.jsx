@@ -11,8 +11,7 @@ const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
 const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
 const PhonebookPage = lazy(() => import('../pages/PhonebookPage/PhonebookPage'));
-const ContactsForm = lazy(() => import('../components/ContactsForm/ContactsForm'));
-const ContactDetails = lazy(() => import('pages/ContactDetails/ContactDetails'));
+// const ContactDetails = lazy(() => import('pages/ContactDetails/ContactDetails'));
 const NotFound = lazy(() => import('pages/NotFound/NotFound'))
 
 

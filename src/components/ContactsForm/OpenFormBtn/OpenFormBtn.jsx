@@ -1,4 +1,4 @@
-import { AiOutlinePlusCircle, AiOutlinePlus } from "react-icons/ai";
+import { AiOutlinePlusCircle } from "react-icons/ai";
 import { OpenFormButton } from "./OpenFormBtn.styled";
 
 const OpenFormBtn = ({ open, isOpen }) => {

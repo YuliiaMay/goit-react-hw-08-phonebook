@@ -1,14 +1,11 @@
 import { nanoid } from "@reduxjs/toolkit";
-import { Form, CteateFormLink, FormTitle, ContactFormLabel, ContactInput, AddContactBtn, Wrapper, BtnBox, CancelFormBtn } from "./ContactsForm.styled";
+import { Form, FormTitle, ContactFormLabel, ContactInput, AddContactBtn, BtnBox, CancelFormBtn } from "./ContactsForm.styled";
 import { useDispatch, useSelector } from "react-redux";
 import { selectContacts } from "redux/selectors";
 import { useState } from "react";
 import { addContact } from "redux/contactsSlice/operations";
-import { useToggle } from "hooks/useToggle";
 
 const ContactsForm = ({isOpen, close}) => {
-    // const { isOpen, open, close } = useToggle();
-
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
     const dispatch = useDispatch();
