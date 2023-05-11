@@ -5,21 +5,7 @@ export const Wrapper = styled.div`
     margin-bottom: 30px;
 `;
 
-export const CteateFormLink = styled(Link)`
-    background-color: transparent;
-    border-radius: 8px;
-    border: 1px solid #0070A0;
-    padding: 6px;
-    width: 100%;
-    font-size: 16px;
-    color: #0070A0;
 
-    &:hover,
-    &:focus {
-        background-color: #006B99;
-        color: #fff;
-    }
-`;
 
 export const FormTitle = styled.h2`
     font-size: 18px;

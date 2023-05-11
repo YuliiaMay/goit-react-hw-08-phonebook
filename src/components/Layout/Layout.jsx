@@ -8,12 +8,7 @@ import { Wrapper } from "./Layout.styled";
 const Layout = () => {
     return (
         <Wrapper>
-            <div>
-                <PhonebookApp />
-            </div>
-            {/* <div>
-                <h1>Phonebook App</h1>
-            </div> */}
+            <PhonebookApp />
         </Wrapper>
     )
 };

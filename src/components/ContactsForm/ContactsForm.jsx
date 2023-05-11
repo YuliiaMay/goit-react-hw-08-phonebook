@@ -6,8 +6,8 @@ import { useState } from "react";
 import { addContact } from "redux/contactsSlice/operations";
 import { useToggle } from "hooks/useToggle";
 
-const ContactsForm = () => {
-    const { isOpen, open, close } = useToggle();
+const ContactsForm = ({isOpen, close}) => {
+    // const { isOpen, open, close } = useToggle();
 
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
@@ -53,13 +53,13 @@ const ContactsForm = () => {
     return (
         <Wrapper>
             
-            {
+            {/* {
                 !isOpen && <CteateFormLink to="create-contact" onClick={open}>New Contact</CteateFormLink>
             }
-            
+             */}
             {
                 isOpen &&
-                    <Form onSubmit={handleSubmit} isOpen={isOpen}>
+                    <Form onSubmit={handleSubmit}>
                         {/* <Title>Phonebook</Title> */}
                         <FormTitle>Create New Contact</FormTitle>
                         <ContactFormLabel htmlFor="contact-name">Name</ContactFormLabel>

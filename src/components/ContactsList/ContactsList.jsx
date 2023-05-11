@@ -4,12 +4,13 @@ import { useDispatch, useSelector} from "react-redux";
 import { selectFilteredContacts } from "../../redux/selectors";
 import { deleteContact } from "redux/contactsSlice/operations";
 import ContactItem from "components/ContactItem/ContactItem";
+import { useToggle } from "hooks/useToggle";
 
 
 const ContactsList = () => {
     const dispatch = useDispatch();
     const visableContacts = useSelector(selectFilteredContacts);
-    console.log(visableContacts);
+    const { isOpen } = useToggle();
 
     const handleDelete = id => dispatch(deleteContact(id));
 

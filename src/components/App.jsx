@@ -37,13 +37,13 @@ export default function App() {
                 <RestrictedRoute redirectTo="/phonebook" component={<LoginPage />} />
               } />
           
-                <Route path="/phonebook" element={
+              <Route path="/phonebook" element={
                   <PrivateRoute redirecrTo="/login" component={<PhonebookPage />} />
-                } >
-                <Route path="create-contact" element={<ContactsForm />} />
+              } >
+                {/* <Route path="create-contact" element={<ContactsForm />} /> */}
               </Route>
 
-              <Route path="/phonebook/:contact" element={<ContactDetails />} />
+              {/* <Route path="/phonebook/:contact" element={<ContactDetails />} /> */}
 
               <Route path="*" element={<NotFound />} />
             </Route>

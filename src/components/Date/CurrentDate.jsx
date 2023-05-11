@@ -1,25 +1,22 @@
+import React, { useEffect, useState } from 'react';
+import Clock from 'react-clock';
+import 'react-clock/dist/Clock.css';
+
+
 const CurrentDate = () => {
-    // const time = new Date();
-    const date = new Date();
-
-    const getTime = () => {
-        const hours = date.getUTCHours();
-        const minutes = date.getUTCMinutes();
-        const seconds = date.getUTCSeconds();
-    };
-
-    const getDate = () => {
-        const day = date.getUTCDate();
-        const month = date.getUTCMonth();
-    };
+    const [value, setValue] = useState(new Date());
 
 
+    useEffect(() => {
+        const interval = setInterval(() => setValue(new Date()), 1000);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, []); 
 
     return (
-        <>
-            {/* <p>{hours} : {minutes} : {seconds}</p>
-            <p>{day} {month}</p>         */}
-        </>
+        <Clock value={value} />
     )
 };
 
