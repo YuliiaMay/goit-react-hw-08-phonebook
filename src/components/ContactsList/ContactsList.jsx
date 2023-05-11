@@ -10,7 +10,6 @@ import { useToggle } from "hooks/useToggle";
 const ContactsList = () => {
     const dispatch = useDispatch();
     const visableContacts = useSelector(selectFilteredContacts);
-    const { isOpen } = useToggle();
 
     const handleDelete = id => dispatch(deleteContact(id));
 
