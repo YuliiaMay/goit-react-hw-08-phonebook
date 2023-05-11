@@ -1,15 +1,13 @@
-import { useDispatch } from "react-redux";
 import { Contact, ContactInfo, DeleteContactBtn, Name, Number, StyledItemLink } from "./ContactItem.styled";
 import { AiTwotoneDelete } from "react-icons/ai";
 
 
 const ContactItem = ({ id, name, number, onClick }) => {
-    const dispatch = useDispatch();
-
-
     return (
         <Contact>
-            <StyledItemLink to="/phonebook/:contact">
+            <StyledItemLink
+                to="/phonebook/:contact"
+            >
                 <ContactInfo>
                     
                         <Name>{name}</Name>
