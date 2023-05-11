@@ -4,7 +4,8 @@ import { useDispatch } from "react-redux";
 import { useAuth } from "hooks/useAuth";
 import { lazy, useEffect } from "react";
 import { refreshUser } from "redux/authSlice/operations";
-
+import { PrivateRoute } from "./PrivateRoute";
+import { RestrictedRoute } from "./RestrictedRoute";
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
@@ -29,13 +30,21 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<HomePage />} />
-              <Route path="/phonebook" element={<PhonebookPage />}>
+              <Route path="/register" element={
+                <RestrictedRoute redirectTo="/phonebook" component={<RegisterPage />} />
+              } />
+              <Route path="/login" element={
+                <RestrictedRoute redirectTo="/phonebook" component={<LoginPage />} />
+              } />
+          
+                <Route path="/phonebook" element={
+                  <PrivateRoute redirecrTo="/login" component={<PhonebookPage />} />
+                } >
                 <Route path="create-contact" element={<ContactsForm />} />
               </Route>
 
               <Route path="/phonebook/:contact" element={<ContactDetails />} />
-              <Route path="/register" element={<RegisterPage />} />
-              <Route path="/login" element={<LoginPage />} />
+
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

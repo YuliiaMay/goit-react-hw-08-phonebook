@@ -1,14 +1,13 @@
-
+import CurrentDate from "components/Date/CurrentDate";
+import screensaver from "../../images/screen.png"
 
 const HomePage = () => {
     return (
         <>
-        {/* <PhonebookApp /> */}
-            <p>12:00</p>
-            <p>12 March 2018</p>
+            <CurrentDate />
+            <img src={screensaver} alt="screensaver" />
         </>
     )
-
 };
 
 export default HomePage;
