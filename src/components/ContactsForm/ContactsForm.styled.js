@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-
-// export const Wrapper = styled.div`
-//     margin-bottom: 30px;
-// `;
-
 export const FormTitle = styled.h1`
     color: #006B99;
     margin-top: 16px;
@@ -20,13 +15,6 @@ export const Form = styled.form`
     border: 3px solid #fff;
     padding: 12px;
 `;
-
-// export const Title = styled.h1`
-//     margin-bottom: 16px;
-//     font-size: 18px;
-//     font-weight: 600;
-//     color: #0070A0;    
-// `;
 
 export const ContactFormLabel = styled.label`
     display: flex;
@@ -76,12 +64,6 @@ export const CancelFormBtn = styled.button`
         color: #0070A0;
         background-color: #FFCFDA;
     }
-
-    // &:hover,
-    // &:focus {
-    //     background-color: #FFCFDA;
-    //     box-shadow: 4px 2px 1px 1px #FF3364;
-    // }
 `;
 
 export const AddContactBtn = styled.button`
@@ -101,10 +83,4 @@ export const AddContactBtn = styled.button`
         color: #0070A0;
         background-color: #BFFFC9;
     }
-
-    // &:hover,
-    // &:focus {
-    //     background-color: #BFFFC9;
-    //     box-shadow: 4px 2px 1px 1px #33FF54;
-    // }
 `;
