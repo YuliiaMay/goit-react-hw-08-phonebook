@@ -38,10 +38,7 @@ export default function App() {
           
               <Route path="/phonebook" element={
                   <PrivateRoute redirecrTo="/login" component={<PhonebookPage />} />
-              } >
-                {/* <Route path="create-contact" element={<ContactsForm />} /> */}
-              </Route>
-
+              } />
               {/* <Route path="/phonebook/:contact" element={<ContactDetails />} /> */}
 
               <Route path="*" element={<NotFound />} />

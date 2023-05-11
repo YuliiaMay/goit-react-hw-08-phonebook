@@ -49,15 +49,9 @@ const ContactsForm = ({isOpen, close}) => {
 
     return (
         <>
-            
-            {/* {
-                !isOpen && <CteateFormLink to="create-contact" onClick={open}>New Contact</CteateFormLink>
-            }
-             */}
             {
                 isOpen &&
                     <Form onSubmit={handleSubmit}>
-                        {/* <Title>Phonebook</Title> */}
                         <FormTitle>Create New Contact</FormTitle>
                         <ContactFormLabel htmlFor="contact-name">Name</ContactFormLabel>
                         <ContactInput
