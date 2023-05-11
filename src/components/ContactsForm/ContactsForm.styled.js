@@ -1,50 +1,55 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-    margin-bottom: 30px;
-`;
 
+// export const Wrapper = styled.div`
+//     margin-bottom: 30px;
+// `;
 
-
-export const FormTitle = styled.h2`
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 8px;
-    color: #0070A0;
+export const FormTitle = styled.h1`
+    color: #006B99;
+    margin-top: 16px;
+    font-size: 28px;
 `;
 
 export const Form = styled.form`
-    border: 2px solid #fff;
-    background-color: #D2E2EA;
-    box-shadow: 1px 1px #E6ECEF;
-    padding: 18px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 32px;
+    border: 3px solid #fff;
+    padding: 12px;
 `;
 
-export const Title = styled.h1`
-    margin-bottom: 16px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #0070A0;    
-`;
+// export const Title = styled.h1`
+//     margin-bottom: 16px;
+//     font-size: 18px;
+//     font-weight: 600;
+//     color: #0070A0;    
+// `;
 
 export const ContactFormLabel = styled.label`
-    font-size: 12px;
-    color: #0070A0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #006B99;
+    font-size: 14px;
 `;
 
 export const ContactInput = styled.input`
-    margin-bottom: 16px;
+    width: 250px;
     height: 30px;
+    margin-bottom: 16px;
     background-color: transparent;
     border: 2px solid #0070A0;
+    border: 2px solid #0070A0;
+    box-shadow: 4px 2px 1px 1px #0070A0;
 
     &:hover,
     &:focus {
+        box-shadow: none;
         border: 2px solid #0070A0;
-        box-shadow: 4px 2px 1px 1px #0070A0;
+        color: #0070A0;
     }
 `;
 
@@ -55,35 +60,51 @@ export const BtnBox = styled.div`
 `;
 
 export const CancelFormBtn = styled.button`
-    height: 26px;
     width: 100px;
+    height: 30px;
+    margin-top: 20px;
     background-color: transparent;
-    color: #0070A0;
-    cursor: pointer;
-    font-size: 12px;
-    color: #0070A0;
+    border: 2px solid #0070A0;
+    box-shadow: 4px 2px 1px 1px #0070A0;
     border: 2px solid #fff;
+    color: #0070A0;
 
     &:hover,
     &:focus {
+        box-shadow: none;
+        border: 2px solid #0070A0;
+        color: #0070A0;
         background-color: #FFCFDA;
-        box-shadow: 4px 2px 1px 1px #FF3364;
     }
+
+    // &:hover,
+    // &:focus {
+    //     background-color: #FFCFDA;
+    //     box-shadow: 4px 2px 1px 1px #FF3364;
+    // }
 `;
 
 export const AddContactBtn = styled.button`
-    height: 26px;
     width: 100px;
+    height: 30px;
+    margin-top: 20px;
     background-color: transparent;
-    color: #0070A0;
-    cursor: pointer;
-    font-size: 12px;
-    color: #0070A0;
+    border: 2px solid #0070A0;
+    box-shadow: 4px 2px 1px 1px #0070A0;
     border: 2px solid #fff;
+    color: #0070A0;
 
     &:hover,
     &:focus {
+        box-shadow: none;
+        border: 2px solid #0070A0;
+        color: #0070A0;
         background-color: #BFFFC9;
-        box-shadow: 4px 2px 1px 1px #33FF54;
     }
+
+    // &:hover,
+    // &:focus {
+    //     background-color: #BFFFC9;
+    //     box-shadow: 4px 2px 1px 1px #33FF54;
+    // }
 `;

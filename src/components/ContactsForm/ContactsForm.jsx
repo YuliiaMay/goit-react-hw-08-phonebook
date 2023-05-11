@@ -51,7 +51,7 @@ const ContactsForm = ({isOpen, close}) => {
     };
 
     return (
-        <Wrapper>
+        <>
             
             {/* {
                 !isOpen && <CteateFormLink to="create-contact" onClick={open}>New Contact</CteateFormLink>
@@ -93,7 +93,7 @@ const ContactsForm = ({isOpen, close}) => {
 
                     </Form>
             }
-        </Wrapper>
+        </>
 
     )
 };

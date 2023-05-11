@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { logIn } from "redux/authSlice/operations";
+import { LoginForm, LoginFormLabel, LoginFormInput, Title, LoginFormBtn } from "./LoginPage.styled";
 
 const LoginPage = () => {
     const dispatch = useDispatch();
@@ -23,18 +24,18 @@ const LoginPage = () => {
 
     return (
         <>
-            <h1>Log In</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
+            <Title>Log In</Title>
+            <LoginForm onSubmit={handleSubmit}>
+                <LoginFormLabel>
                     Email
-                    <input type="email" name="email"/>
-                </label>   
-                <label>
+                    <LoginFormInput type="email" name="email"/>
+                </LoginFormLabel>   
+                <LoginFormLabel>
                     Password
-                    <input type="password" name="password"/>
-                </label>   
-                <button type="submit">Log In</button>
-            </form>
+                    <LoginFormInput type="password" name="password"/>
+                </LoginFormLabel>   
+                <LoginFormBtn type="submit">Log In</LoginFormBtn>
+            </LoginForm>
         </>
     )
 };

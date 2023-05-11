@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { RegisterForm, RegisterFormInput, RegisterFormLabel,RegisterFormBtn } from "./RegisterPage.styled";
+import { RegisterForm, RegisterFormInput, RegisterFormLabel,RegisterFormBtn, Title } from "./RegisterPage.styled";
 import { register } from "redux/authSlice/operations";
 
 const RegisterPage = () => {
@@ -23,7 +23,7 @@ const RegisterPage = () => {
 
     return (
         <>
-            <h1>Register</h1>
+            <Title>Register</Title>
             <RegisterForm onSubmit={handleSubmit}>
                 <RegisterFormLabel>
                     User Name
