@@ -3,7 +3,8 @@ import { fetchContacts, addContact, deleteContact } from "redux/contactsSlice/op
 
 
 const extraOperations = [fetchContacts, addContact, deleteContact];
-const getOperations = (type) => isAnyOf(...extraOperations.map(action => action[type]));
+const getOperations = (type) =>
+    isAnyOf(...extraOperations.map(action => action[type]));
 
 // operations redusers
 const pandingReduser = state => {

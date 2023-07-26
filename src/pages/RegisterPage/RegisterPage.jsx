@@ -2,9 +2,9 @@ import { useDispatch } from "react-redux";
 import { RegisterForm, RegisterFormInput, RegisterFormLabel,RegisterFormBtn, Title } from "./RegisterPage.styled";
 import { register } from "redux/authSlice/operations";
 
+
 const RegisterPage = () => {
     const dispatch = useDispatch();
-    
 
     const handleSubmit = (e) => {
         e.preventDefault();
